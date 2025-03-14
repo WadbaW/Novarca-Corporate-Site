@@ -3,81 +3,79 @@
   <head>
     <meta charset="UTF-8" />
     <title>{% block title %}Welcome!{% endblock %}</title>
-    <link
-      rel="icon"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>"
-    />
+    <link rel="icon" href="./logo/LogoLight.svg" />
     {% block stylesheets %} <link rel="stylesheet" href={{
       asset("styles/app.scss")
     }}
-    /> {% endblock %} {% block javascripts %} {% block importmap %}{{
-      importmap("app")
-    }}
-    <script defer src="{{ asset('bootstrap.bundle.min.js') }}"></script>
-    {% endblock %} {% endblock %}
+    /> {% endblock %} 
+    {% block javascripts %} 
+      {% block importmap %}{{
+        importmap("app")
+      }}
+      {% endblock %} 
+      <script defer src={{ asset('bootstrap.bundle.min.js') }}></script>
+    {% endblock %}
   </head>
   <body>
-    <header>
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img
-            src="/docs/5.3/assets/brand/bootstrap-logo.svg"
-            alt="Logo"
-            width="30"
-            height="24"
-            class="d-inline-block align-text-top"
-          />
-          Novarca
-        </a>
-      </div>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+    {% block header %}
+      <header class="bg-light shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light container">
+          <a class="navbar-brand d-flex align-items-center" href={{ path('app_home') }}>
+            <img
+              src="/logo/LogoBrandDark.svg"
+              alt="Logo"
+              height="100"
+              class="me-2"
+            />
+          </a>
           <button
             class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" href={{ path('app_home') }}>Accueil</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href={{ path('app_services') }}>Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href={{ path('app_about') }}>À propos</a>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown link
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </li>
-                </ul>
+              <li class="nav-item">
+                <a class="nav-link" href={{ path('app_contact') }}>Contact</a>
               </li>
             </ul>
           </div>
-        </div>
-      </nav>
-    </header>
+        </nav>
+      </header>
+    {% endblock %}
     <main>{% block main %}{% endblock %}</main>
+    {% block footer %}
+      <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <a class="navbar-brand d-flex align-items-center justify-content-center mb-3" href={{ path('app_home') }}>
+                <img src="/logo/LogoLight.svg" alt="Logo" width="50" height="50" class="me-2">
+                <span class="fw-bold fs-3">Novarca <span class="fw-bold fs-5">Constructions</span></span>
+            </a>
+            <ul class="list-unstyled d-flex justify-content-center mb-3">
+                <li class="mx-3"><a class="text-white text-decoration-none" href={{ path('app_home') }}>Accueil</a></li>
+                <li class="mx-3"><a class="text-white text-decoration-none" href={{ path('app_services') }}>Services</a></li>
+                <li class="mx-3"><a class="text-white text-decoration-none" href={{ path('app_about') }}>À propos</a></li>
+                <li class="mx-3"><a class="text-white text-decoration-none" href={{ path('app_contact') }}>Contact</a></li>
+                <li class="mx-3"><a class="text-white text-decoration-none" href={{ path('app_rgpd') }}>RGPD</a></li>
+            </ul>
+            <p class="mb-0">&copy; 2025 Novarca - Tous droits réservés.</p>
+        </div>
+      </footer>
+    {% endblock %}
   </body>
 </html>

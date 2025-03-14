@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %} {% block title %}{{ title }}{% endblock %} {%
+block main %}
+
+<main class="container mt-5">
+  <section class="text-center">
+    <h1 class="fw-bold">Nos Services</h1>
+    <p class="lead">
+      Découvrez nos expertises dans la construction d'infrastructures et de
+      bâtiments.
+    </p>
+  </section>
+
+  <section class="mt-5">
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <img
+          src="infrastructure.jpg"
+          alt="Infrastructures"
+          class="img-fluid rounded mb-3"
+        />
+        <h3>Infrastructures</h3>
+        <p>
+          Nous concevons et construisons des routes, ponts et autres
+          infrastructures essentielles à la société.
+        </p>
+      </div>
+      <div class="col-md-4 text-center">
+        <img
+          src="batiment.jpg"
+          alt="Bâtiments"
+          class="img-fluid rounded mb-3"
+        />
+        <h3>Bâtiments</h3>
+        <p>
+          De la conception à la réalisation, nous bâtissons des immeubles et
+          espaces de vie modernes et durables.
+        </p>
+      </div>
+      <div class="col-md-4 text-center">
+        <img
+          src="gestion.jpg"
+          alt="Gestion de projet"
+          class="img-fluid rounded mb-3"
+        />
+        <h3>Gestion de projet</h3>
+        <p>
+          Nous pilotons vos projets de construction de A à Z pour assurer leur
+          réussite.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
