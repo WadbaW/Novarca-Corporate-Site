@@ -1,0 +1,22 @@
+@use "./abstracts/" as *;
+
+@import "../../vendor/twbs/bootstrap/scss/functions";
+@import "../../vendor/twbs/bootstrap/scss/variables";
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+);
+
+@import "../../vendor/twbs/bootstrap/scss/bootstrap";
+
+body {
+  background-color: #333;
+  color: white;
+}
