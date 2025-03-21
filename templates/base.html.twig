@@ -60,20 +60,82 @@
     {% endblock %}
     <main>{% block main %}{% endblock %}</main>
     {% block footer %}
-      <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container text-center">
-            <a class="navbar-brand d-flex align-items-center justify-content-center mb-3" href={{ path('app_home') }}>
-                <img src="/logo/LogoLight.svg" alt="Logo" width="50" height="50" class="me-2">
-                <span class="fw-bold fs-3">Novarca <span class="fw-bold fs-5">Constructions</span></span>
-            </a>
-            <ul class="list-unstyled d-flex justify-content-center mb-3">
-                <li class="mx-3"><a class="text-white text-decoration-none" href={{ path('app_home') }}>Accueil</a></li>
-                <li class="mx-3"><a class="text-white text-decoration-none" href={{ path('app_services') }}>Services</a></li>
-                <li class="mx-3"><a class="text-white text-decoration-none" href={{ path('app_about') }}>À propos</a></li>
-                <li class="mx-3"><a class="text-white text-decoration-none" href={{ path('app_contact') }}>Contact</a></li>
-                <li class="mx-3"><a class="text-white text-decoration-none" href={{ path('app_rgpd') }}>RGPD</a></li>
-            </ul>
-            <p class="mb-0">&copy; 2025 Novarca - Tous droits réservés.</p>
+      <footer class="footer-section bg-dark text-white pt-5 pb-4">
+        <div class="container">
+          <div class="row">
+            <!-- Colonne Logo et Description -->
+            <div class="col-lg-4 mb-4 mb-lg-0">
+              <a class="d-inline-block mb-3" href="{{ path('app_home') }}">
+                <img src="/logo/LogoLight.svg" alt="Logo Novarca" width="60" height="60">
+              </a>
+              <h5 class="fw-bold mb-3">Novarca Constructions</h5>
+              <p class="opacity-75">Experts en construction d'infrastructures et de bâtiments innovants. Notre engagement : l'excellence technique et la durabilité au service de vos projets.</p>
+              
+              <div class="mt-4">
+                <a href="#" class="me-3 text-white social-icon"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="me-3 text-white social-icon"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="me-3 text-white social-icon"><i class="bi bi-instagram"></i></a>
+              </div>
+            </div>
+            
+            <!-- Colonne Navigation -->
+            <div class="col-lg-2 col-md-4 col-6 mb-4 mb-md-0">
+              <h6 class="text-uppercase fw-bold mb-3 text-primary-light">Navigation</h6>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a class="text-white text-decoration-none hover-link" href="{{ path('app_home') }}">Accueil</a></li>
+                <li class="mb-2"><a class="text-white text-decoration-none hover-link" href="{{ path('app_services') }}">Services</a></li>
+                <li class="mb-2"><a class="text-white text-decoration-none hover-link" href="{{ path('app_about') }}">À propos</a></li>
+                <li class="mb-2"><a class="text-white text-decoration-none hover-link" href="{{ path('app_contact') }}">Contact</a></li>
+              </ul>
+            </div>
+            
+            <!-- Colonne Services -->
+            <div class="col-lg-2 col-md-4 col-6 mb-4 mb-md-0">
+              <h6 class="text-uppercase fw-bold mb-3 text-primary-light">Services</h6>
+              <ul class="list-unstyled">
+                <li class="mb-2"><a class="text-white text-decoration-none hover-link" href="{{ path('app_services') }}#batiments">Bâtiments</a></li>
+                <li class="mb-2"><a class="text-white text-decoration-none hover-link" href="{{ path('app_services') }}#infrastructures">Infrastructures</a></li>
+                <li class="mb-2"><a class="text-white text-decoration-none hover-link" href="{{ path('app_services') }}#renovation">Rénovation</a></li>
+                <li class="mb-2"><a class="text-white text-decoration-none hover-link" href="{{ path('app_services') }}#conseil">Conseil</a></li>
+              </ul>
+            </div>
+            
+            <!-- Colonne Contact -->
+            <div class="col-lg-4 col-md-4 mb-4 mb-md-0">
+              <h6 class="text-uppercase fw-bold mb-3 text-primary-light">Contact</h6>
+              <ul class="list-unstyled">
+                <li class="mb-3 d-flex align-items-start">
+                  <i class="bi bi-geo-alt-fill me-2 mt-1"></i>
+                  <span>123 Avenue des Constructions, 75000 Paris, France</span>
+                </li>
+                <li class="mb-3 d-flex align-items-center">
+                  <i class="bi bi-telephone-fill me-2"></i>
+                  <span>01 23 45 67 89</span>
+                </li>
+                <li class="mb-3 d-flex align-items-center">
+                  <i class="bi bi-envelope-fill me-2"></i>
+                  <span>contact@novarca.fr</span>
+                </li>
+                <li class="d-flex align-items-center">
+                  <i class="bi bi-clock-fill me-2"></i>
+                  <span>Lun-Ven: 8h-18h</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Ligne de séparation -->
+          <hr class="my-4 opacity-25">
+          
+          <!-- Copyright et Mentions légales -->
+          <div class="row align-items-center">
+            <div class="col-md-6 text-center text-md-start">
+              <p class="mb-md-0">&copy; 2025 Novarca Constructions - Tous droits réservés</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <a class="text-white text-decoration-none me-3 small hover-link" href="{{ path('app_rgpd') }}">Politique de confidentialité</a>
+            </div>
+          </div>
         </div>
       </footer>
     {% endblock %}
