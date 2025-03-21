@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>{% block title %}Welcome!{% endblock %}</title>
+    <title>{% block title %}Titre{% endblock %}</title>
     <link rel="icon" href="./logo/LogoLight.svg" />
     {% block stylesheets %} <link rel="stylesheet" href={{
       asset("styles/app.scss")
@@ -18,7 +18,7 @@
   </head>
   <body>
     {% block header %}
-      <header class="bg-light shadow-sm">
+      <header class="bg-light shadow-sm pt-2 pb-2">
         <nav class="navbar navbar-expand-lg navbar-light container">
           <a class="navbar-brand d-flex align-items-center" href={{ path('app_home') }}>
             <img
@@ -40,18 +40,18 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto nav-underline">
               <li class="nav-item">
-                <a class="nav-link" href={{ path('app_home') }}>Accueil</a>
+                <a class="nav-link {{ title == "Accueil" ? "active" : "" }}" href={{ path('app_home') }}>Accueil</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href={{ path('app_services') }}>Services</a>
+                <a class="nav-link {{ title == "Services" ? "active" : "" }}" href={{ path('app_services') }}>Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href={{ path('app_about') }}>À propos</a>
+                <a class="nav-link {{ title == "A propos" ? "active" : "" }}" href={{ path('app_about') }}>À propos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href={{ path('app_contact') }}>Contact</a>
+                <a class="nav-link {{ title == "Contact" ? "active" : "" }}" href={{ path('app_contact') }}>Contact</a>
               </li>
             </ul>
           </div>

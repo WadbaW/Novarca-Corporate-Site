@@ -1,4 +1,5 @@
 @use "./abstracts/" as *;
+@use "./components/" as *;
 
 @import "../../vendor/twbs/bootstrap/scss/functions";
 @import "../../vendor/twbs/bootstrap/scss/variables";
@@ -13,6 +14,8 @@ $theme-colors: (
   "light": $light,
   "dark": $dark,
 );
+
+$card-border-width: 0px;
 
 @import "../../vendor/twbs/bootstrap/scss/bootstrap";
 

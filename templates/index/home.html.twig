@@ -2,35 +2,77 @@
 %} {% block main %}
 
 <main class="container mt-5">
-  <section class="text-center">
-    <h1 class="fw-bold">Novarca - Construire l'avenir, aujourd'hui</h1>
-    <p class="lead">
-      Expert en construction d'infrastructures et de bâtiments, nous réalisons
-      vos projets avec excellence et durabilité.
-    </p>
-    <a href={{ path('app_services') }} class="btn btn-primary">Découvrir nos services</a>
+  <section class="hero-section text-center py-5 rounded">
+    <div class="container">
+      <h1 class="display-3 fw-bold mb-3">NOVARCA <span class="text-primary">Constructions</span></h1>
+      <h2 class="fw-light mb-4"><span class="border-bottom border-primary pb-1">Construire l'avenir, aujourd'hui</span></h2>
+      
+      <p class="lead mb-5 mx-auto">
+        Experts en innovation architecturale, nous transformons vos visions en réalités concrètes.
+        Des infrastructures durables aux bâtiments intelligents, notre savoir-faire technique
+        façonne les espaces de demain.
+      </p>
+      
+      <div class="d-flex justify-content-center gap-3 mt-4">
+        <a href="{{ path('app_services') }}" class="btn btn-primary btn-lg">Découvrir nos services</a>
+        <a href="{{ path('app_contact') }}" class="btn btn-outline-light btn-lg">Discuter de votre projet</a>
+      </div>
+      
+      <div class="mt-5 d-flex justify-content-center gap-4">
+        <div class="text-center">
+          <div class="fw-bold fs-4 text-primary">25+</div>
+          <div class="small text-light">Années d'expérience</div>
+        </div>
+        <div class="text-center">
+          <div class="fw-bold fs-4 text-primary">150+</div>
+          <div class="small text-light">Projets réalisés</div>
+        </div>
+        <div class="text-center">
+          <div class="fw-bold fs-4 text-primary">98%</div>
+          <div class="small text-light">Satisfaction client</div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="services" class="mt-5">
     <h2 class="text-center">Nos Services</h2>
     <div class="row text-center">
       <div class="col-md-4">
-        <h3>Infrastructures</h3>
-        <p>
-          Nous concevons et construisons des infrastructures modernes et
-          durables.
-        </p>
+        <div class="card shadow-lg h-100">
+          <img src="/images/building_to_illustrate.jpg" class="card-img-top" alt="Construction de bâtiment">
+          <div class="card-body text-bg-dark  d-flex flex-column rounded-bottom p-4">
+            <h3 class="card-title fw-bold">Infrastructures</h3>
+            <p class="card-text">Nous concevons et construisons des infrastructures modernes et durables.</p>
+            <div class="mt-auto">
+              <a href="/services/batiments" class="btn btn-outline-primary stretched-link">Découvrir nos projets</a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-md-4">
-        <h3>Bâtiments</h3>
-        <p>
-          De la conception à la réalisation, nous bâtissons des structures
-          solides et innovantes.
-        </p>
+        <div class="card shadow-lg h-100">
+          <img src="/images/house_to_illustrate.jpg" class="card-img-top" alt="Construction de bâtiment">
+          <div class="card-body text-bg-dark d-flex flex-column rounded-bottom p-4">
+            <h3 class="card-title fw-bold">Bâtiments</h3>
+            <p class="card-text">De la conception à la réalisation, nous bâtissons des structures solides et innovantes.</p>
+            <div class="mt-auto">
+              <a href="/services/batiments" class="btn btn-outline-primary stretched-link">Découvrir nos projets</a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-md-4">
-        <h3>Gestion de projets</h3>
-        <p>Nous pilotons vos projets de A à Z pour garantir leur succès.</p>
+        <div class="card shadow-lg h-100">
+          <img src="/images/architect_to_illustrate.jpg" class="card-img-top" alt="Construction de bâtiment">
+          <div class="card-body text-bg-dark d-flex flex-column rounded-bottom p-4">
+            <h3 class="card-title fw-bold">Gestion de projets</h3>
+            <p class="card-text">Nous pilotons vos projets de A à Z pour garantir leur succès.</p>
+            <div class="mt-auto">
+              <a href="/services/batiments" class="btn btn-outline-primary stretched-link">Découvrir nos projets</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -49,9 +91,7 @@
     <p>
       Besoin d'un devis ou d'informations ? Contactez-nous dès aujourd'hui !
     </p>
-    <a href="mailto:contact@novarca.com" class="btn btn-secondary"
-      >Envoyer un email</a
-    >
+    <a href={{ path('app_contact') }} class="btn btn-primary" >Contact</a>
   </section>
 </main>
 
