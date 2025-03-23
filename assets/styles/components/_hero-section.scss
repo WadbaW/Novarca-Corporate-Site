@@ -10,11 +10,11 @@
   padding: 5rem 0;
   position: relative;
 
-  .lead {
+  & .lead {
     max-width: 800px;
   }
 
-  ::after {
+  &::after {
     content: "";
     position: absolute;
     bottom: 0;

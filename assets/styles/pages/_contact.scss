@@ -5,7 +5,7 @@
   overflow: hidden;
   border-left: 8px solid scale-color($primary, $lightness: -50%); /* Utilisez une couleur plus foncée que votre primaire */
 
-  ::before {
+  &::before {
     content: "";
     position: absolute;
     top: 0;
