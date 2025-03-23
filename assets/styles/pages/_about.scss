@@ -1,0 +1,71 @@
+@use "../abstracts/" as *;
+
+.value-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: linear-gradient(
+    45deg,
+    rgba(var(--bs-dark-rgb), 0.9) 0%,
+    rgba(var(--bs-dark-rgb), 0.7) 40%,
+    rgba(var(--bs-dark-rgb), 0.5) 100%
+  );
+  height: 100%;
+
+  & .title {
+    color: $primary;
+  }
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: $primary;
+  }
+
+  & .timeline-item {
+    position: relative;
+    padding-bottom: 30px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -34px;
+      top: 0;
+      height: 16px;
+      width: 16px;
+      border-radius: 50%;
+      background-color: $primary;
+    }
+  }
+}
+
+.counter-box {
+  text-align: center;
+  padding: 30px 20px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
+.counter-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: $primary;
+}
+
+.counter-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}

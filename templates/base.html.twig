@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>{% block title %}Titre{% endblock %}</title>
     <link rel="icon" href="./logo/LogoLight.svg" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     {% block stylesheets %} <link rel="stylesheet" href={{
       asset("styles/app.scss")
     }}
@@ -96,7 +97,7 @@
                 <li class="mb-2"><a class="text-white text-decoration-none hover-link" href="{{ path('app_services') }}#batiments">Bâtiments</a></li>
                 <li class="mb-2"><a class="text-white text-decoration-none hover-link" href="{{ path('app_services') }}#infrastructures">Infrastructures</a></li>
                 <li class="mb-2"><a class="text-white text-decoration-none hover-link" href="{{ path('app_services') }}#renovation">Rénovation</a></li>
-                <li class="mb-2"><a class="text-white text-decoration-none hover-link" href="{{ path('app_services') }}#conseil">Conseil</a></li>
+                <li class="mb-2"><a class="text-white text-decoration-none hover-link" href="{{ path('app_services') }}#gestion">Gestion de projet</a></li>
               </ul>
             </div>
             

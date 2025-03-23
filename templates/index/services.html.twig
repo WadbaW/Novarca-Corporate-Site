@@ -1,54 +1,295 @@
 {% extends 'base.html.twig' %} {% block title %}{{ title }}{% endblock %} {%
 block main %}
-
-<main class="container mt-5">
-  <section class="text-center">
-    <h1 class="fw-bold">Nos Services</h1>
-    <p class="lead">
-      Découvrez nos expertises dans la construction d'infrastructures et de
-      bâtiments.
-    </p>
-  </section>
-
-  <section class="mt-5">
-    <div class="row">
-      <div class="col-md-4 text-center">
+<!-- Section Bâtiments -->
+<section id="batiments" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
         <img
-          src="infrastructure.jpg"
-          alt="Infrastructures"
-          class="img-fluid rounded mb-3"
+          src="/images/house_construction.jpg"
+          alt="Construction de bâtiments"
+          class="img-fluid rounded-3 shadow-lg"
         />
-        <h3>Infrastructures</h3>
-        <p>
-          Nous concevons et construisons des routes, ponts et autres
-          infrastructures essentielles à la société.
-        </p>
       </div>
-      <div class="col-md-4 text-center">
-        <img
-          src="batiment.jpg"
-          alt="Bâtiments"
-          class="img-fluid rounded mb-3"
-        />
-        <h3>Bâtiments</h3>
-        <p>
-          De la conception à la réalisation, nous bâtissons des immeubles et
-          espaces de vie modernes et durables.
+      <div class="col-lg-6">
+        <h2 class="display-6 fw-bold mb-3">
+          <i class="bi bi-building text-primary"></i> Bâtiments
+        </h2>
+        <div class="title-underline mb-4"></div>
+        <p class="lead mb-4">
+          Nous concevons et construisons des bâtiments résidentiels, commerciaux
+          et industriels qui allient fonctionnalité, esthétique et durabilité.
         </p>
-      </div>
-      <div class="col-md-4 text-center">
-        <img
-          src="gestion.jpg"
-          alt="Gestion de projet"
-          class="img-fluid rounded mb-3"
-        />
-        <h3>Gestion de projet</h3>
-        <p>
-          Nous pilotons vos projets de construction de A à Z pour assurer leur
-          réussite.
+        <ul class="list-unstyled mb-4">
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            Immeubles résidentiels et logements collectifs
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            Bureaux et espaces commerciaux
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            Bâtiments industriels et entrepôts
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            Équipements publics (écoles, hôpitaux, etc.)
+          </li>
+        </ul>
+        <p class="mb-4">
+          Notre expertise technique et notre approche collaborative nous
+          permettent de répondre aux exigences les plus strictes en matière de
+          qualité, de délais et de budget. Nous mettons l'accent sur
+          l'efficacité énergétique et l'intégration harmonieuse dans
+          l'environnement.
         </p>
+        <a href="{{ path('app_contact') }}" class="btn btn-primary"
+          >Demander un devis</a
+        >
       </div>
     </div>
-  </section>
-</main>
+  </div>
+</section>
+
+<!-- Section Infrastructures -->
+<section id="infrastructures" class="py-5 bg-dark">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+        <img
+          src="/images/building_construction.jpg"
+          alt="Construction d'infrastructures"
+          class="img-fluid rounded-3 shadow-lg"
+        />
+      </div>
+      <div class="col-lg-6 order-lg-1">
+        <h2 class="display-6 fw-bold mb-3">
+          <i class="bi bi-bricks text-primary"></i> Infrastructures
+        </h2>
+        <div class="title-underline mb-4"></div>
+        <p class="lead mb-4">
+          Nous concevons et réalisons des infrastructures modernes, durables et
+          adaptées aux besoins des collectivités et des entreprises.
+        </p>
+        <ul class="list-unstyled mb-4">
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            Routes, ponts et ouvrages d'art
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            Réseaux d'eau et d'assainissement
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            Aménagements urbains et paysagers
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            Infrastructures sportives et de loisirs
+          </li>
+        </ul>
+        <p class="mb-4">
+          Forts de notre expertise technique et de notre maîtrise des
+          contraintes réglementaires, nous vous accompagnons de l'étude de
+          faisabilité à la livraison de votre projet d'infrastructure, en
+          veillant à respecter les normes environnementales et de sécurité.
+        </p>
+        <a href="{{ path('app_contact') }}" class="btn btn-primary"
+          >Demander un devis</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Rénovation -->
+<section id="renovation" class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <img
+          src="/images/finish_house-1.jpg"
+          alt="Projets de rénovation"
+          class="img-fluid rounded-3 shadow-lg"
+        />
+      </div>
+      <div class="col-lg-6">
+        <h2 class="display-6 fw-bold mb-3">
+          <i class="bi bi-tools text-primary"></i> Rénovation
+        </h2>
+        <div class="title-underline mb-4"></div>
+        <p class="lead mb-4">
+          Nous donnons une nouvelle vie à vos espaces existants grâce à nos
+          services de rénovation et de réhabilitation de haute qualité.
+        </p>
+        <ul class="list-unstyled mb-4">
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            Rénovation complète ou partielle
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            Réhabilitation de bâtiments anciens
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            Amélioration énergétique
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            Extension et surélévation
+          </li>
+        </ul>
+        <p class="mb-4">
+          Notre équipe d'experts est capable d'intervenir sur tous types de
+          chantiers, du logement individuel au bâtiment industriel, en passant
+          par les monuments historiques. Nous vous proposons des solutions
+          adaptées à vos besoins, dans le respect du patrimoine existant.
+        </p>
+        <a href="{{ path('app_contact') }}" class="btn btn-primary"
+          >Demander un devis</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Gestion -->
+<section id="gestion" class="py-5 bg-dark">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+        <img
+          src="/images/finish_house-2.jpg"
+          alt="Gestion de projet"
+          class="img-fluid rounded-3 shadow-lg"
+        />
+      </div>
+      <div class="col-lg-6 order-lg-1">
+        <h2 class="display-6 fw-bold mb-3">
+          <i class="bi bi-lightbulb text-primary"></i> Gestion de projet
+        </h2>
+        <div class="title-underline mb-4"></div>
+        <p class="lead mb-4">
+          Nous mettons notre expertise à votre service pour vous accompagner
+          dans la définition et l'optimisation de votre projet de construction.
+        </p>
+        <ul class="list-unstyled mb-4">
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            Études de faisabilité et d'opportunité
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            Assistance à maîtrise d'ouvrage
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            Expertise technique et réglementaire
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            Optimisation des coûts et des délais
+          </li>
+        </ul>
+        <p class="mb-4">
+          Grâce à notre connaissance approfondie du secteur de la construction
+          et à notre réseau de partenaires qualifiés, nous vous aidons à prendre
+          les meilleures décisions pour votre projet, en tenant compte de vos
+          contraintes budgétaires et techniques.
+        </p>
+        <a href="{{ path('app_contact') }}" class="btn btn-primary"
+          >Demander un devis</a
+        >
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Pourquoi nous choisir -->
+<section class="why-choose-us py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-5 fw-bold">
+        Pourquoi choisir Novarca Constructions ?
+      </h2>
+      <div class="title-underline mx-auto mb-4"></div>
+      <p class="lead">
+        Novarca Constructions se distingue par son engagement envers
+        l'excellence, l'innovation et la satisfaction client.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="feature-card text-center p-4 h-100 shadow-sm rounded-3">
+          <div class="feature-icon mb-3">
+            <i class="bi bi-award text-primary"></i>
+          </div>
+          <h3 class="h4 fw-bold">Expertise reconnue</h3>
+          <p>
+            Plus de 25 ans d'expérience dans la construction et plus de 500
+            projets réalisés avec succès.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-card text-center p-4 h-100 shadow-sm rounded-3">
+          <div class="feature-icon mb-3">
+            <i class="bi bi-people text-primary"></i>
+          </div>
+          <h3 class="h4 fw-bold">Équipe qualifiée</h3>
+          <p>
+            Des ingénieurs, architectes et techniciens hautement qualifiés et
+            formés aux dernières techniques.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-card text-center p-4 h-100 shadow-sm rounded-3">
+          <div class="feature-icon mb-3">
+            <i class="bi bi-recycle text-primary"></i>
+          </div>
+          <h3 class="h4 fw-bold">Engagement durable</h3>
+          <p>
+            Une approche responsable qui intègre les enjeux environnementaux à
+            chaque étape de nos projets.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section CTA -->
+<section class="cta-section py-5 bg-primary text-white">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8 text-center text-lg-start">
+        <h2 class="display-6 fw-bold mb-3">
+          Prêt à concrétiser votre projet ?
+        </h2>
+        <p class="lead mb-lg-0">
+          Contactez-nous dès aujourd'hui pour discuter de votre projet et
+          obtenir un devis personnalisé.
+        </p>
+      </div>
+      <div class="col-lg-4 text-center text-lg-end">
+        <a
+          href="{{ path('app_contact') }}"
+          class="btn btn-light btn-lg fw-bold px-4"
+        >
+          Demander un devis gratuit
+          <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock %}

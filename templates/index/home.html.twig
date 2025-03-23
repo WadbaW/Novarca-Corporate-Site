@@ -1,23 +1,31 @@
-{% extends 'base.html.twig' %} {% block title %}{{ title }}{% endblock
-%} {% block main %}
+{% extends 'base.html.twig' %} {% block title %}{{ title }}{% endblock %} {%
+block main %}
 
 <main class="container mt-5">
   <section class="hero-section text-center py-5 rounded">
     <div class="container">
-      <h1 class="display-3 fw-bold mb-3">NOVARCA <span class="text-primary">Constructions</span></h1>
-      <h2 class="fw-light mb-4"><span class="border-bottom border-primary pb-1">Construire l'avenir, aujourd'hui</span></h2>
-      
-      <p class="lead mb-5 mx-auto">
-        Experts en innovation architecturale, nous transformons vos visions en réalités concrètes.
-        Des infrastructures durables aux bâtiments intelligents, notre savoir-faire technique
-        façonne les espaces de demain.
+      <h1 class="display-3 fw-bold mb-3">
+        NOVARCA <span class="text-primary">Constructions</span>
+      </h1>
+      <h2 class="fw-light mb-4">
+        <span class="border-bottom border-primary pb-1"
+          >Construire l'avenir, aujourd'hui</span
+        >
+      </h2>
+      <p class="lead mb-5 mx-5 px-5">
+        Experts en innovation architecturale, nous transformons vos visions en
+        réalités concrètes. Des infrastructures durables aux bâtiments
+        intelligents, notre savoir-faire technique façonne les espaces de
+        demain.
       </p>
-      
       <div class="d-flex justify-content-center gap-3 mt-4">
-        <a href="{{ path('app_services') }}" class="btn btn-primary btn-lg">Découvrir nos services</a>
-        <a href="{{ path('app_contact') }}" class="btn btn-outline-light btn-lg">Discuter de votre projet</a>
+        <a href="{{ path('app_services') }}" class="btn btn-primary btn-lg"
+          >Découvrir nos services</a
+        >
+        <a href="{{ path('app_contact') }}" class="btn btn-outline-light btn-lg"
+          >Discuter de votre projet</a
+        >
       </div>
-      
       <div class="mt-5 d-flex justify-content-center gap-4">
         <div class="text-center">
           <div class="fw-bold fs-4 text-primary">25+</div>
@@ -34,85 +42,189 @@
       </div>
     </div>
   </section>
-
   <section id="services" class="mt-5">
-    
     <div class="section-title-container text-center mb-5">
       <h2 class="display-4 fw-bold position-relative d-inline-block">
         Nos Services
         <span class="title-underline"></span>
       </h2>
-      <p class="lead mt-3">Des solutions complètes pour tous vos projets de construction</p>
+      <p class="lead mt-3">
+        Des solutions complètes pour tous vos projets de construction
+      </p>
     </div>
-
     <div class="row text-center">
       <div class="col-md-4">
-        <div class="card shadow-lg h-100">
-          <img src="/images/building_to_illustrate.jpg" class="card-img-top" alt="Construction de bâtiment">
-          <div class="card-body text-bg-dark  d-flex flex-column rounded-bottom p-4">
-            <h3 class="card-title fw-bold">Infrastructures</h3>
-            <p class="card-text">Nous concevons et construisons des infrastructures modernes et durables.</p>
-            <div class="mt-auto">
-              <a href="{{ path('app_services') }}#building" class="btn btn-outline-primary stretched-link">Découvrir nos projets</a>
+        <div class="card custom-card shadow-lg h-100 border-0 overflow-hidden">
+          <div class="card-img-container">
+            <img
+              src="/images/building_to_illustrate.jpg"
+              class="card-img-top"
+              alt="Construction de bâtiment"
+            />
+            <div class="card-overlay-gradient"></div>
+          </div>
+          <div
+            class="card-body text-bg-dark d-flex flex-column rounded-bottom p-4 position-relative"
+          >
+            <div class="custom-icon-container">
+              <i class="bi bi-building"></i>
+            </div>
+            <h3 class="card-title fw-bold mt-2">Infrastructures</h3>
+            <div class="title-separator my-2"></div>
+            <p class="card-text">
+              Nous concevons et construisons des infrastructures modernes et
+              durables.
+            </p>
+            <div class="mt-2 pb-3">
+              <a
+                href="{{ path('app_services') }}#infrastructures"
+                class="btn btn-outline-primary btn-custom stretched-link"
+                >Découvrir nos projets <i class="bi bi-arrow-right ms-1"></i
+              ></a>
             </div>
           </div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card shadow-lg h-100">
-          <img src="/images/house_to_illustrate.jpg" class="card-img-top" alt="Construction de bâtiment">
-          <div class="card-body text-bg-dark d-flex flex-column rounded-bottom p-4">
-            <h3 class="card-title fw-bold">Bâtiments</h3>
-            <p class="card-text">De la conception à la réalisation, nous bâtissons des structures solides et innovantes.</p>
-            <div class="mt-auto">
-              <a href="{{ path('app_services') }}#house" class="btn btn-outline-primary stretched-link">Découvrir nos projets</a>
+        <div class="card custom-card shadow-lg h-100 border-0 overflow-hidden">
+          <div class="card-img-container">
+            <img
+              src="/images/house_to_illustrate.jpg"
+              class="card-img-top"
+              alt="Construction de maison"
+            />
+            <div class="card-overlay-gradient"></div>
+          </div>
+          <div
+            class="card-body text-bg-dark d-flex flex-column rounded-bottom p-4 position-relative"
+          >
+            <div class="custom-icon-container">
+              <i class="bi bi-house"></i>
+            </div>
+            <h3 class="card-title fw-bold mt-2">Bâtiments</h3>
+            <div class="title-separator my-2"></div>
+            <p class="card-text">
+              De la conception à la réalisation, nous bâtissons des structures
+              solides et innovantes.
+            </p>
+            <div class="mt-2 pb-3">
+              <a
+                href="{{ path('app_services') }}#batiments"
+                class="btn btn-outline-primary btn-custom stretched-link"
+                >Découvrir nos projets <i class="bi bi-arrow-right ms-1"></i
+              ></a>
             </div>
           </div>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card shadow-lg h-100">
-          <img src="/images/architect_to_illustrate.jpg" class="card-img-top" alt="Construction de bâtiment">
-          <div class="card-body text-bg-dark d-flex flex-column rounded-bottom p-4">
-            <h3 class="card-title fw-bold">Gestion de projets</h3>
-            <p class="card-text">Nous pilotons vos projets de A à Z pour garantir leur succès.</p>
-            <div class="mt-auto">
-              <a href="{{ path('app_services') }}#project" class="btn btn-outline-primary stretched-link">Découvrir nos projets</a>
+        <div class="card custom-card shadow-lg h-100 border-0 overflow-hidden">
+          <div class="card-img-container">
+            <img
+              src="/images/architect_to_illustrate.jpg"
+              class="card-img-top"
+              alt="Gestion de projet"
+            />
+            <div class="card-overlay-gradient"></div>
+          </div>
+          <div
+            class="card-body text-bg-dark d-flex flex-column rounded-bottom p-4 position-relative"
+          >
+            <div class="custom-icon-container">
+              <i class="bi bi-journal-text"></i>
+            </div>
+            <h3 class="card-title fw-bold mt-2">Gestion de projets</h3>
+            <div class="title-separator my-2"></div>
+            <p class="card-text">
+              Nous pilotons vos projets de A à Z pour garantir leur succès.
+            </p>
+            <div class="mt-2 pb-3">
+              <a
+                href="{{ path('app_services') }}#gestion"
+                class="btn btn-outline-primary btn-custom stretched-link"
+                >Découvrir nos projets <i class="bi bi-arrow-right ms-1"></i
+              ></a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-  <div class="container">
-    <div class="row">
-      <!-- Section "À propos" -->
+  <div class="container my-5 py-5">
+    <div class="row gap-auto">
       <div class="col-md-6">
-        <section id="about" class="mt-5 text-center">
-          <div class="section-title-container text-center">
-            <h2 class="display-4 fw-bold position-relative d-inline-block">
-              À propos de Novarca
-              <span class="title-underline"></span>
-            </h2>
-            <p class="lead mt-3">Découvrez notre histoire, notre parcours et nos convictions.</p>
+        <div
+          class="about-card h-100 position-relative overflow-hidden rounded-3 shadow-lg"
+        >
+          <div class="card-overlay"></div>
+          <div class="card-content p-4 p-md-5 d-flex flex-column h-100">
+            <div class="icon-container mb-4">
+              <i class="bi bi-building fs-1 text-primary"></i>
+            </div>
+            <h2 class="display-6 fw-bold mb-3 text-white">Notre Histoire</h2>
+            <p class="text-white opacity-90 mb-4">
+              Depuis 1995, Novarca Constructions façonne le paysage urbain avec
+              expertise et vision. Notre équipe de passionnés met son
+              savoir-faire au service de projets qui résistent à l'épreuve du
+              temps.
+            </p>
+            <ul class="text-white opacity-90 mb-4">
+              <li class="mb-2">Une équipe d'experts certifiés</li>
+              <li class="mb-2">Des valeurs d'excellence et d'innovation</li>
+              <li class="mb-2">Un engagement durable et responsable</li>
+            </ul>
+            <div class="mt-auto">
+              <a
+                href="{{ path('app_about') }}"
+                class="btn btn-light btn-lg fw-semibold stretched-link"
+              >
+                Découvrir notre entreprise
+                <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+            </div>
           </div>
-          <a href={{ path('app_about') }} class="btn btn-primary">À propos</a>
-        </section>
+        </div>
       </div>
-  
-      <!-- Section "Contact" -->
       <div class="col-md-6">
-        <section id="contact" class="mt-5 text-center">
-          <div class="section-title-container text-center">
-            <h2 class="display-4 fw-bold position-relative d-inline-block">
-              Contactez-nous
-              <span class="title-underline"></span>
+        <div
+          class="contact-card h-100 position-relative overflow-hidden rounded-3 shadow-lg"
+        >
+          <div class="card-overlay contact-overlay"></div>
+          <div class="card-content p-4 p-md-5 d-flex flex-column h-100">
+            <div class="icon-container mb-4">
+              <i class="bi bi-chat-dots fs-1 text-primary"></i>
+            </div>
+            <h2 class="display-6 fw-bold mb-3 text-white">
+              Discutons de votre projet
             </h2>
-            <p class="lead mt-3">Besoin d'un devis ou d'informations ? Contactez-nous dès aujourd'hui !</p>
+            <p class="text-white opacity-90 mb-4">
+              Vous avez un projet de construction ou de rénovation ? Notre
+              équipe est prête à vous conseiller et à transformer vos idées en
+              réalité concrète.
+            </p>
+
+            <div class="contact-info mb-4">
+              <div class="d-flex align-items-center mb-3">
+                <i class="bi bi-telephone-fill text-white me-3"></i>
+                <span class="text-white">01 23 45 67 89</span>
+              </div>
+              <div class="d-flex align-items-center">
+                <i class="bi bi-envelope-fill text-white me-3"></i>
+                <span class="text-white">contact@novarca.fr</span>
+              </div>
+            </div>
+
+            <div class="mt-auto">
+              <a
+                href="{{ path('app_contact') }}"
+                class="btn btn-light btn-lg fw-semibold stretched-link"
+              >
+                Demander un devis gratuit
+                <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+            </div>
           </div>
-          <a href={{ path('app_contact') }} class="btn btn-primary">Contact</a>
-        </section>
+        </div>
       </div>
     </div>
   </div>
